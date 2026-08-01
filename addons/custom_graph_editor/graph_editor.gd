@@ -57,11 +57,11 @@ const OFFSET_DISTANCE = 15.0
 ## Current zoom amount
 @export var zoom: float = 1.0
 ## Zoom increase/decrease value
-@export var zoom_step: float = 0.2
+@export var zoom_step: float = 0.1
 ## Max zoom amount
-@export var max_zoom: float = 2.0
+@export var max_zoom: float = 3.0
 ## Min zoom amount
-@export var min_zoom: float = 0.5
+@export var min_zoom: float = 0.1
 
 ### Regular variables
 
@@ -635,12 +635,12 @@ func _on_select_all() -> void:
 
 ## On zoom in action
 func _zoom_in(amount: float) -> void:
-    set_zoom(zoom + amount)
+    set_zoom(zoom + amount*zoom)
 
 
 ## On zoom out action
 func _zoom_out(amount: float) -> void:
-    set_zoom(zoom - amount)
+    set_zoom(zoom - amount*zoom)
 
 
 ## Start (move-)dragging the selected nodes.

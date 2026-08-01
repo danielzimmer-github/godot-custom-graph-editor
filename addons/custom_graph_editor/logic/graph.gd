@@ -15,7 +15,7 @@ signal link_deleted(link_id: int)
 
 ## ID counter for nodes and links id.
 ## Not optimal way to handle IDs, but works for now...
-static var NEXT_NODE_ID = 0
+static var NEXT_NODE_ID : int = 0
 
 ## Class used for nodes. Override this with your own node class if needed.
 var node_class: GDScript = preload("res://addons/custom_graph_editor/logic/graph_node.gd")
